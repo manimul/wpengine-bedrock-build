@@ -57,3 +57,4 @@ then
   git checkout master
 fi
 git branch -D wpengine
+rm -rf wp-content/
