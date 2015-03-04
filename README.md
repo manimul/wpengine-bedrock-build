@@ -12,6 +12,7 @@ WPEngine doesn't support things like Composer, Gulp, Bower, etc or allows the Wo
 4. Run `sh wpengine.sh` followed by `staging` or `production`. E.g `sh wpengine.sh staging`
 
 # Todo
+* Cache contents of npm install
 * Remove output
 * Add helpful messages
 * Further error checking

@@ -58,3 +58,18 @@ then
 fi
 git branch -D wpengine
 rm -rf wp-content/
+
+composer install
+
+cd "web/app/themes/${theme}"
+rm .gitignore
+npm install
+bower install
+if [ "$environment" == "staging" ]
+then
+  gulp
+elif [ "$environment" == "production" ]
+then
+  gulp --production
+fi
+cd ../../../../
