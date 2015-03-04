@@ -22,7 +22,6 @@ git checkout -b wpengine
 cp -r web/app wp-content
 rm "wp-content/themes/${theme}/.gitignore"
 rm .gitignore
-touch .gitignore
 echo "/*\n!wp-content/" >> .gitignore
 git ls-files | xargs git rm --cached
 

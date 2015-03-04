@@ -1,9 +1,5 @@
-# WPEngine Roots / Bedrock build for WordPress
-WPEngine doesn't support things like Composer, Gulp, Bower, etc or allows the WordPress to be managed from a subdirectory. This script will go through the normal steps of the build process in a wpengine branch on the repository and make sure all the files needed are included.
-
-# Requirements
-* [Bedrock](https://github.com/roots/bedrock)
-* [Roots](https://github.com/roots/roots)
+# Roots Bedrock support for WPEngine
+WPEngine doesn't support Composer, Gulp or Bower. This bash script will move the `app/` folder back to 'wp-content/'. It will update the root .gitignore (and clear the cache) so all files are ignored, except those in the `wp-content/` folder. It will then remove the .gitignore in the theme so any compiled assets are included. Finally, it will push up the branch to WPEngine (replacing capistrano). This is all completed on a separate WPEngine branch which is created initially and deleted after completion.
 
 # Usage
 1. Edit the name of the theme in `wpengine.sh`
